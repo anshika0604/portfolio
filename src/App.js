@@ -11,6 +11,7 @@ import SocialBar from "./components/SocialBar";
 import WhatICreate from "./components/WhatICreate";
 import DancingMonkey from "./components/DancingMonkey";
 import JumpingFrogs from "./components/JumpingFrogs";
+import RoamingSnake from "./components/RoamingSnake";
 
 import './App.css';
 
@@ -28,6 +29,8 @@ export default function App() {
 
        <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[120px] bg-gradient-to-b from-cyan-500/10 via-blue-500/5 to-transparent blur-3xl z-40 pointer-events-none" />
       <JumpingFrogs />
+      {/* Comment out the line below to disable the snake */}
+      <RoamingSnake />
       <Navbar />
       <main className="relative z-10">
       <Hero />
