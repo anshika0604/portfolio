@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Footer from './components/Footer';
 import SocialBar from "./components/SocialBar";
 import WhatICreate from "./components/WhatICreate";
+import DancingMonkey from "./components/DancingMonkey";
 
 import './App.css';
 
@@ -30,6 +31,7 @@ export default function App() {
       <Hero />
       <SocialBar />
       <WhatICreate />
+      <DancingMonkey />
       <About />
       <Skills />
       <Experience />
