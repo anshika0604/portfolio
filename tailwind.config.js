@@ -13,5 +13,6 @@ export default {
         hero: "1.05",
       },
     },
+  },
   plugins: [],
 };

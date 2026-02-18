@@ -56,3 +56,25 @@
 .create-card:nth-child(3){animation-delay:2s;}
 .create-card:nth-child(4){animation-delay:3s;}
 
+/* Dancing Monkey */
+@keyframes monkeyDance {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  15% { transform: translateY(-30px) rotate(-12deg); }
+  30% { transform: translateY(0) rotate(12deg); }
+  45% { transform: translateY(-20px) rotate(-8deg) scaleX(-1); }
+  60% { transform: translateY(0) rotate(8deg) scaleX(-1); }
+  75% { transform: translateY(-30px) rotate(-12deg); }
+  90% { transform: translateY(-5px) rotate(6deg); }
+}
+
+.dancing-monkey {
+  animation: monkeyDance 1.2s ease-in-out infinite;
+  display: inline-block;
+  cursor: pointer;
+  filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.4));
+}
+
+.dancing-monkey:hover {
+  animation-duration: 0.5s;
+  filter: drop-shadow(0 0 40px rgba(0, 229, 255, 0.8));
+}
