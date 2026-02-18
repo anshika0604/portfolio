@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+
+.create-card {
+  background: rgba(10, 20, 40, 0.55);
+  border: 1px solid rgba(0, 229, 255, 0.12);
+  backdrop-filter: blur(14px);
+  padding: 28px;
+  border-radius: 18px;
+  text-align: left;
+  transition: 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.create-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(0,229,255,0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.create-card:hover::before {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.create-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0,229,255,0.35);
+}
+
+.create-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(0,229,255,0.12);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 26px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 18px rgba(0,229,255,0.25);
 }
 
-.App-link {
-  color: #61dafb;
+/* Floating animation */
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create-card {
+  animation: floatCard 6s ease-in-out infinite;
 }
+.create-card:nth-child(2){animation-delay:1s;}
+.create-card:nth-child(3){animation-delay:2s;}
+.create-card:nth-child(4){animation-delay:3s;}
+

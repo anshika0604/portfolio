@@ -1,13 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
-      colors: {
-        neon: "#00bfff",
-        darkbg: "#0b1320",
+      fontSize: {
+        hero: "3.75rem", // 60px
+      },
+      lineHeight: {
+        hero: "1.05",
       },
     },
-  },
   plugins: [],
-}
+};
