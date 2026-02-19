@@ -29,7 +29,7 @@ export default function Projects() {
       category: "Mobile",
       desc: "Multiplayer Android game with offline (local & vs computer) and online modes using Firebase game codes for cross-device play.",
       tech: "Kotlin, XML, Firebase, Realtime DB",
-      github: "https://github.com/anshika0604",
+      github: "https://github.com/anshika0604/Tic-Tac-Toe-Online",
       demo: "#",
       image: "/project3.png"
     },
@@ -38,7 +38,7 @@ export default function Projects() {
       category: "ML",
       desc: "CNN-powered system detecting crop diseases from leaf images with 98% accuracy and a Flask web interface for real-time diagnosis and supplement recommendations.",
       tech: "Python, CNN, Flask, Image Processing",
-      github: "https://github.com/anshika0604",
+      github: "https://github.com/anshika0604/Movie-Recommendation-System",
       demo: "#",
       image: "/project4.png"
     }
