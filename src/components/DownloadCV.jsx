@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 export default function DownloadCV() {
   return (
     <a
-      href="/Anshika_Resume.pdf"
+      href="./Anshika_Resume.pdf"
       download
       className="download-cv-btn"
     >

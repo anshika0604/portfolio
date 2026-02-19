@@ -13,7 +13,7 @@ export default function Projects() {
       tech: "Kotlin, Jetpack Compose, Spring Boot, Kafka, PostgreSQL, Docker",
       github: "https://github.com/anshika0604/socialTrendApp",
       demo: "#",
-      image: "/project1.png"
+      image: "./project1.png"
     },
     {
       title: "Android Attendance System (QR)",
@@ -22,7 +22,7 @@ export default function Projects() {
       tech: "Java, Firebase, XML, Android SDK",
       github: "https://github.com/anshika0604/Android-Attendance-Sytem-Using-QR-Code",
       demo: "#",
-      image: "/project2.png"
+      image: "./project2.png"
     },
     {
       title: "Tic-Tac-Toe Game",
@@ -31,7 +31,7 @@ export default function Projects() {
       tech: "Kotlin, XML, Firebase, Realtime DB",
       github: "https://github.com/anshika0604/Tic-Tac-Toe-Online",
       demo: "#",
-      image: "/project3.png"
+      image: "./project3.png"
     },
     {
       title: "Plant Disease Detection",
@@ -40,7 +40,7 @@ export default function Projects() {
       tech: "Python, CNN, Flask, Image Processing",
       github: "https://github.com/anshika0604/Movie-Recommendation-System",
       demo: "#",
-      image: "/project4.png"
+      image: "./project4.png"
     }
   ];
 
