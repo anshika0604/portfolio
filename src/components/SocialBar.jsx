@@ -4,7 +4,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Globe,
   Music,
   Moon,
   Sun

@@ -18,12 +18,12 @@ export default function ParticlesBackground() {
     window.addEventListener("resize", resize);
 
     // Detect theme from HTML class
-    const isDark = document.documentElement.classList.contains("dark");
+//     const isDark = document.documentElement.classList.contains("dark");
 
     // Particle color for themes
-    const particleColor = isDark
-      ? "rgba(0, 200, 255, 0.35)"   // neon cyan in dark
-      : "rgba(0, 0, 0, 0.08)";     // subtle gray in light
+//     const particleColor = isDark
+//       ? "rgba(0, 200, 255, 0.35)"   neon cyan in dark
+//       : "rgba(0, 0, 0, 0.08)";     subtle gray in light
 
     for (let i = 0; i < num; i++) {
       particles.push({
