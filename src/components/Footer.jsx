@@ -5,7 +5,7 @@ export default function Contact() {
     <section id="contact" className="max-w-7xl mx-auto px-6 py-36 relative">
 
       {/* Title */}
-      <h2 className="text-5xl font-semibold text-center tracking-tight text-gray-900 text-[var(--text-primary)]">
+      <h2 className="text-5xl font-semibold text-center tracking-tight text-[var(--text)]">
         Get in <span className="text-cyan-500">Touch</span>
       </h2>
 
@@ -25,7 +25,7 @@ export default function Contact() {
             <FaEnvelope />
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 text-[var(--text-primary)]">Email</h3>
+            <h3 className="font-semibold text-[var(--text-primary)]">Email</h3>
             <p className="text-gray-700 dark:text-gray-400">
               anshikanegi.cs19@gmail.com
             </p>
@@ -43,7 +43,7 @@ export default function Contact() {
             <FaGithub />
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 text-[var(--text-primary)]">GitHub</h3>
+            <h3 className="font-semibold text-[var(--text-primary)]">GitHub</h3>
             <p className="text-gray-700 dark:text-gray-400">
               github.com/anshika0604
             </p>
@@ -61,7 +61,7 @@ export default function Contact() {
             <FaLinkedin />
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 text-[var(--text-primary)]">LinkedIn</h3>
+            <h3 className="font-semibold text-[var(--text-primary)]">LinkedIn</h3>
             <p className="text-gray-700 dark:text-gray-400">
               linkedin.com/in/anshika-negi
             </p>
