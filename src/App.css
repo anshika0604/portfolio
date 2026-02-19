@@ -1,45 +1,51 @@
-
 .create-card {
-  background: rgba(10, 20, 40, 0.55);
-  border: 1px solid rgba(0, 229, 255, 0.12);
+  position: relative; /* REQUIRED for ::before */
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   backdrop-filter: blur(14px);
   padding: 28px;
   border-radius: 18px;
-  text-align: left;
   transition: 0.35s ease;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
+/* Hover */
+.create-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+/* Glow overlay */
 .create-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(0,229,255,0.15), transparent 60%);
+  background: radial-gradient(circle at top, rgba(0,229,255,0.18), transparent 65%);
   opacity: 0;
   transition: 0.4s;
+  pointer-events: none;
+  border-radius: 18px;
 }
 
 .create-card:hover::before {
   opacity: 1;
 }
 
-.create-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(0,229,255,0.35);
-}
-
+/* ICON */
 .create-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: rgba(0,229,255,0.12);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-soft);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  margin-bottom: 16px;
-  box-shadow: 0 0 18px rgba(0,229,255,0.25);
+  font-size: 20px;
+  box-shadow: 0 0 14px var(--accent-glow);
+  flex-shrink: 0;
 }
 
 /* Floating animation */
@@ -49,10 +55,12 @@
   100% { transform: translateY(0); }
 }
 
-.create-card {
-  animation: floatCard 6s ease-in-out infinite;
+/* Only animate on desktop */
+@media (min-width: 768px) {
+  .create-card {
+    animation: floatCard 6s ease-in-out infinite;
+  }
+  .create-card:nth-child(2){animation-delay:1s;}
+  .create-card:nth-child(3){animation-delay:2s;}
+  .create-card:nth-child(4){animation-delay:3s;}
 }
-.create-card:nth-child(2){animation-delay:1s;}
-.create-card:nth-child(3){animation-delay:2s;}
-.create-card:nth-child(4){animation-delay:3s;}
-

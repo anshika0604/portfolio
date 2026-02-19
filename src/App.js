@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,10 +9,16 @@ import Skills from './components/Skills';
 import Footer from './components/Footer';
 import SocialBar from "./components/SocialBar";
 import WhatICreate from "./components/WhatICreate";
+import DownloadCV from "./components/DownloadCV";
 
 import './App.css';
 
 export default function App() {
+    const [theme, setTheme] = useState("dark");
+    useEffect(() => {
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      }, [theme]);
+
   return (
     <div className="bg-noise relative min-h-screen">
 
@@ -28,13 +34,14 @@ export default function App() {
       <Navbar />
       <main className="relative z-10">
       <Hero />
-      <SocialBar />
+      <SocialBar theme={theme} setTheme={setTheme}/>
       <WhatICreate />
       <About />
       <Skills />
       <Experience />
       <Education />
       <Projects />
+      <DownloadCV />
        <Footer />
       </main>
     </div>

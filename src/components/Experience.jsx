@@ -32,14 +32,15 @@ export default function Experience() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-5xl font-bold mb-16 text-white text-center"
+        className="mb-16 text-center"
       >
-       <h2 className="experience-title">
-         Work Experience
-       </h2>
+        <h2 className="experience-title text-[var(--text)]">
+          Work Experience
+        </h2>
       </motion.h2>
 
-      <div className="relative border-l border-white/10 pl-10">
+      {/* Timeline Line */}
+      <div className="relative border-l pl-10 border-[var(--border)]">
 
         {experiences.map((exp, i) => (
           <motion.div
@@ -50,20 +51,25 @@ export default function Experience() {
             className="mb-16 relative"
           >
             {/* Timeline Dot */}
-            <span className="absolute -left-[20px] top-2 w-4 h-4 bg-cyan-400 rounded-full shadow-[0_0_20px_rgba(34,211,238,0.8)]" />
+            <span className="absolute -left-[20px] top-2 w-4 h-4 bg-cyan-500 rounded-full shadow-[0_0_20px_rgba(34,211,238,0.8)]" />
 
             {/* Card */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-xl hover:border-cyan-400/40 transition">
+            <div className="backdrop-blur-xl p-6 rounded-xl transition
+                            bg-[var(--card-bg)]
+                            border border-[var(--border)]
+                            hover:border-cyan-400/40
+                            shadow-sm
+                            hover:shadow-[0_0_25px_rgba(0,255,255,0.15)]">
 
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-[var(--text)]">
                 {exp.role}
               </h3>
 
-              <p className="text-cyan-400 text-sm mt-1">
+              <p className="text-cyan-500 text-sm mt-1">
                 {exp.company} • {exp.date}
               </p>
 
-              <ul className="mt-4 text-gray-400 space-y-2 text-sm leading-relaxed">
+              <ul className="mt-4 text-[var(--text-muted)] space-y-2 text-sm leading-relaxed">
                 {exp.points.map((p, idx) => (
                   <li key={idx}>• {p}</li>
                 ))}

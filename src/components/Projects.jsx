@@ -8,12 +8,12 @@ export default function Projects() {
   const projects = [
     {
       title: "Social Media Trends Tracker",
-      category: "Mobile",
+      category: "Backend",
       desc: "Android app showing real-time Instagram hashtag trends with Compose UI and backend microservices.",
       tech: "Kotlin, Jetpack Compose, Spring Boot, Kafka, PostgreSQL, Docker",
       github: "https://github.com/anshika0604/socialTrendApp",
       demo: "#",
-      image: "/projects/social-trends.png"
+      image: "/project1.png"
     },
     {
       title: "Android Attendance System (QR)",
@@ -22,7 +22,25 @@ export default function Projects() {
       tech: "Java, Firebase, XML, Android SDK",
       github: "https://github.com/anshika0604/Android-Attendance-Sytem-Using-QR-Code",
       demo: "#",
-      image: "/projects/attendance.png"
+      image: "/project2.png"
+    },
+    {
+      title: "Tic-Tac-Toe Game",
+      category: "Mobile",
+      desc: "Multiplayer Android game with offline (local & vs computer) and online modes using Firebase game codes for cross-device play.",
+      tech: "Kotlin, XML, Firebase, Realtime DB",
+      github: "https://github.com/anshika0604",
+      demo: "#",
+      image: "/project3.png"
+    },
+    {
+      title: "Plant Disease Detection",
+      category: "ML",
+      desc: "CNN-powered system detecting crop diseases from leaf images with 98% accuracy and a Flask web interface for real-time diagnosis and supplement recommendations.",
+      tech: "Python, CNN, Flask, Image Processing",
+      github: "https://github.com/anshika0604",
+      demo: "#",
+      image: "/project4.png"
     }
   ];
 
@@ -41,7 +59,7 @@ export default function Projects() {
 
       {/* Filters */}
       <div className="flex justify-center gap-3 mt-8 flex-wrap">
-        {["All", "Mobile", "Backend"].map(cat => (
+        {["All", "Mobile", "Backend", "ML"].map(cat => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}

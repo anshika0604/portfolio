@@ -18,26 +18,44 @@ export default function EducationTimeline() {
 
   return (
     <section id="education" className="py-32 relative">
-      <h2 className="experience-title">Education</h2>
+      {/* Title */}
+      <h2 className="experience-title text-gray-900 dark:text-white">
+        Education
+      </h2>
 
-      <div className="timeline-wrapper">
+      <div className="timeline-wrapper relative mt-20">
+
         {/* Timeline Line */}
-        <div className="timeline-line"></div>
+        <div className="timeline-line bg-gray-300 dark:bg-white/20"></div>
 
         {/* Cards */}
         <div className="timeline-cards">
           {education.map((edu, i) => (
             <motion.div
               key={i}
-              whileHover={{ y: -12 }}
-              className="edu-card"
+              whileHover={{ y: -10 }}
+              className="edu-card bg-white dark:bg-white/5
+                         border border-gray-200 dark:border-white/10
+                         backdrop-blur-xl"
             >
-              <div className="edu-dot"></div>
+              {/* Dot */}
+              <div className="edu-dot bg-cyan-500"></div>
 
-              <span className="edu-year">{edu.year}</span>
-              <h3 className="edu-degree">{edu.degree}</h3>
-              <p className="edu-school">{edu.school}</p>
-              <p className="edu-score">{edu.score}</p>
+              <span className="edu-year text-cyan-500">
+                {edu.year}
+              </span>
+
+              <h3 className="edu-degree text-gray-900 dark:text-white">
+                {edu.degree}
+              </h3>
+
+              <p className="edu-school text-gray-700 dark:text-gray-300">
+                {edu.school}
+              </p>
+
+              <p className="edu-score text-gray-600 dark:text-gray-400">
+                {edu.score}
+              </p>
             </motion.div>
           ))}
         </div>

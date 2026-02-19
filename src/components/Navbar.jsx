@@ -22,13 +22,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 backdrop-blur-xl bg-black/50 border border-white/10 rounded-2xl px-10 py-4 shadow-lg max-w-7xl w-[94%]">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50
+      bg-[var(--card-bg)] backdrop-blur-xl border border-[var(--border)]
+      rounded-2xl px-12 py-3 shadow-lg w-[95%] max-w-[1300px]">
 
       <div className="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
-        {/* Logo/Name - Left */}
+
+        {/* Logo / Name */}
         <motion.a
           href="#"
-          className="text-lg lg:text-xl font-semibold text-[#2dd4bf] tracking-wider drop-shadow-[0_0_8px_rgba(45,212,191,0.35)]"
+          className="text-lg lg:text-xl font-semibold tracking-wider
+          text-[var(--accent)] drop-shadow-[0_0_8px_var(--accent-glow)]"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -36,20 +40,22 @@ const Navbar = () => {
           Anshika
         </motion.a>
 
-        {/* Desktop Nav - Right */}
+        {/* Desktop Nav */}
         <ul className="hidden md:flex items-center space-x-5 lg:space-x-7">
           {navLinks.map((link, index) => (
             <li key={link.name}>
               <motion.a
                 href={link.href}
-                className="relative text-xs lg:text-sm font-normal text-gray-300 hover:text-white transition-all duration-300 group"
+                className="relative text-xs lg:text-sm font-normal
+                text-[var(--text-muted)] hover:text-[var(--text)] transition-all duration-300 group"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-cyan-400 group-hover:w-full transition-all duration-300 origin-left" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[var(--accent)]
+                group-hover:w-full transition-all duration-300 origin-left" />
               </motion.a>
             </li>
           ))}
@@ -62,26 +68,24 @@ const Navbar = () => {
           aria-label="Toggle menu"
         >
           <motion.span
-            className="block w-6 h-0.5 bg-white/90 rounded-sm transition-all duration-300 group-hover:bg-white"
+            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm transition-all duration-300"
             animate={{
               rotate: isOpen ? 45 : 0,
               y: isOpen ? 3 : 0,
-              backgroundColor: isOpen ? '#ffffff' : '#ffffffcc'
             }}
           />
           <motion.span
-            className="block w-6 h-0.5 bg-white/90 rounded-sm transition-all duration-300"
+            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm transition-all duration-300"
             animate={{
               opacity: isOpen ? 0 : 1,
               scale: isOpen ? 0.8 : 1
             }}
           />
           <motion.span
-            className="block w-6 h-0.5 bg-white/90 rounded-sm transition-all duration-300 group-hover:bg-white"
+            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm transition-all duration-300"
             animate={{
               rotate: isOpen ? -45 : 0,
               y: isOpen ? -3 : 0,
-              backgroundColor: isOpen ? '#ffffff' : '#ffffffcc'
             }}
           />
         </button>
@@ -95,7 +99,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto', y: 0 }}
             exit={{ opacity: 0, height: 0, y: -10 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-black/90 backdrop-blur-xl border-t border-white/10"
+            className="md:hidden overflow-hidden bg-[var(--card-bg)] backdrop-blur-xl border-t border-[var(--border)]"
           >
             {navLinks.map((link, index) => (
               <motion.li
@@ -104,15 +108,15 @@ const Navbar = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="px-6 py-4 border-t border-white/5 last:border-b-0"
+                className="px-6 py-4 border-t border-[var(--border)]"
               >
                 <a
                   href={link.href}
-                  className="block text-sm font-normal text-gray-300 hover:text-white hover:translate-x-2 transition-all duration-300 group"
+                  className="block text-sm font-normal text-[var(--text-muted)] hover:text-[var(--text)] hover:translate-x-2 transition-all duration-300 group"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                  <span className="ml-2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 inline-block group-hover:w-8 transition-all duration-300" />
+                  <span className="ml-2 w-0 h-0.5 bg-[var(--accent)] inline-block group-hover:w-8 transition-all duration-300" />
                 </a>
               </motion.li>
             ))}
