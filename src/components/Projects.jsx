@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
@@ -12,7 +11,6 @@ export default function Projects() {
       desc: "Android app showing real-time Instagram hashtag trends with Compose UI and backend microservices.",
       tech: "Kotlin, Jetpack Compose, Spring Boot, Kafka, PostgreSQL, Docker",
       github: "https://github.com/anshika0604/socialTrendApp",
-      demo: "#",
       image: "./project1.png"
     },
     {
@@ -21,7 +19,6 @@ export default function Projects() {
       desc: "QR-based attendance app with Firebase realtime sync for students & faculty.",
       tech: "Java, Firebase, XML, Android SDK",
       github: "https://github.com/anshika0604/Android-Attendance-Sytem-Using-QR-Code",
-      demo: "#",
       image: "./project2.png"
     },
     {
@@ -30,7 +27,6 @@ export default function Projects() {
       desc: "Multiplayer Android game with offline (local & vs computer) and online modes using Firebase game codes for cross-device play.",
       tech: "Kotlin, XML, Firebase, Realtime DB",
       github: "https://github.com/anshika0604/Tic-Tac-Toe-Online",
-      demo: "#",
       image: "./project3.png"
     },
     {
@@ -39,7 +35,6 @@ export default function Projects() {
       desc: "CNN-powered system detecting crop diseases from leaf images with 98% accuracy and a Flask web interface for real-time diagnosis and supplement recommendations.",
       tech: "Python, CNN, Flask, Image Processing",
       github: "https://github.com/anshika0604/Movie-Recommendation-System",
-      demo: "#",
       image: "./project4.png"
     }
   ];
@@ -88,9 +83,6 @@ export default function Projects() {
             <div className="flex gap-3 mt-5">
               <a href={p.github} target="_blank" rel="noreferrer" className="project-btn-outline">
                 <FaGithub /> GitHub
-              </a>
-              <a href={p.demo} target="_blank" rel="noreferrer" className="project-btn-primary">
-                <FiExternalLink /> Live Demo
               </a>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="w-[500px] h-[500px] bg-[var(--accent)]/30 blur-[180px] rounded-full translate-x-[200px] -translate-y-[50px]" />
       </div>
 
-      <div className="max-w-7xl w-[94%] mx-auto px-7">
+      <div className="max-w-7xl w-[94%] mx-auto px-4 sm:px-7">
 
         {/* Subtitle */}
         <p className="tracking-widest text-sm mb-4 text-[var(--accent)]">
@@ -21,40 +21,40 @@ export default function Hero() {
         </p>
 
         {/* Main Heading */}
-        <h1 className="text-[72px] font-bold leading-tight tracking-tight text-[var(--text)]">
+        <h1 className="text-4xl sm:text-5xl lg:text-[72px] font-bold leading-tight tracking-tight text-[var(--text)]">
           Hi, I'm <span className="text-[var(--accent)]">Anshika</span>
         </h1>
 
         {/* Role */}
-        <h2 className="text-3xl mt-4 font-light text-[var(--text-muted)]">
+        <h2 className="text-2xl sm:text-3xl mt-4 font-light text-[var(--text-muted)]">
           Software Developer
         </h2>
 
         {/* Description */}
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--text-muted)]">
+        <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-[var(--text-muted)]">
           I craft exceptional digital experiences through clean code and creative
-          solutions. From web apps to mobile and games, I bring ideas to life.
+          solutions. From web apps to mobile, I bring ideas to life.
         </p>
 
         {/* Stats */}
         <Stats />
 
         {/* Buttons */}
-        <div className="mt-12 flex items-center gap-6">
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 sm:gap-6">
           <a
             href="#about"
-            className="px-6 py-3 bg-[var(--accent)] text-black rounded-xl text-sm font-medium
-            hover:scale-105 transition-all shadow-lg shadow-[var(--accent)]/30"
+            className="w-full sm:w-auto px-6 py-3 bg-[var(--accent)] text-black rounded-xl text-sm font-medium
+            hover:scale-105 transition-all shadow-lg shadow-[var(--accent)]/30 text-center"
           >
             View Details
           </a>
 
           <a
             href="#contact"
-            className="px-6 py-3 border border-[var(--border)] text-[var(--text)] rounded-xl text-sm
-            hover:bg-[var(--card-bg)] hover:scale-105 transition-all"
+            className="w-full sm:w-auto px-6 py-3 border border-[var(--border)] text-[var(--text)] rounded-xl text-sm
+            hover:bg-[var(--card-bg)] hover:scale-105 transition-all text-center"
           >
-            Let’s Talk
+            Let's Talk
           </a>
         </div>
 
