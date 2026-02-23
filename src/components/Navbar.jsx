@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = () => {
+const Navbar = ({ triggerMeteors }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -25,10 +25,11 @@ const Navbar = () => {
         <motion.a
           href="#"
           className="text-lg lg:text-xl font-semibold tracking-wider
-          text-[var(--accent)] drop-shadow-[0_0_8px_var(--accent-glow)]"
+          text-[var(--accent)] drop-shadow-[0_0_8px_var(--accent-glow)] cursor-pointer"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
+          onClick={triggerMeteors}   // 🌠 Meteor Trigger
         >
           Anshika
         </motion.a>
@@ -61,37 +62,28 @@ const Navbar = () => {
           aria-label="Toggle menu"
         >
           <motion.span
-            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm transition-all duration-300"
-            animate={{
-              rotate: isOpen ? 45 : 0,
-              y: isOpen ? 3 : 0,
-            }}
+            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm"
+            animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 3 : 0 }}
           />
           <motion.span
-            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm transition-all duration-300"
-            animate={{
-              opacity: isOpen ? 0 : 1,
-              scale: isOpen ? 0.8 : 1
-            }}
+            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm"
+            animate={{ opacity: isOpen ? 0 : 1, scale: isOpen ? 0.8 : 1 }}
           />
           <motion.span
-            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm transition-all duration-300"
-            animate={{
-              rotate: isOpen ? -45 : 0,
-              y: isOpen ? -3 : 0,
-            }}
+            className="block w-6 h-0.5 bg-[var(--text)] rounded-sm"
+            animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -3 : 0 }}
           />
         </button>
       </div>
 
-      {/* Mobile Menu Panel */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.ul
             initial={{ opacity: 0, height: 0, y: -10 }}
             animate={{ opacity: 1, height: 'auto', y: 0 }}
             exit={{ opacity: 0, height: 0, y: -10 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden bg-[var(--card-bg)] backdrop-blur-xl border-t border-[var(--border)]"
           >
             {navLinks.map((link, index) => (
@@ -105,11 +97,10 @@ const Navbar = () => {
               >
                 <a
                   href={link.href}
-                  className="block text-sm font-normal text-[var(--text-muted)] hover:text-[var(--text)] hover:translate-x-2 transition-all duration-300 group"
+                  className="block text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                  <span className="ml-2 w-0 h-0.5 bg-[var(--accent)] inline-block group-hover:w-8 transition-all duration-300" />
                 </a>
               </motion.li>
             ))}
