@@ -5,6 +5,14 @@ export default function Projects() {
   const [filter, setFilter] = useState("All");
 
   const projects = [
+      {
+         title: "Dramatic Advice Generator (AI-Powered Web Application)",
+         category: "Backend",
+         desc: "Designed and developed a full-stack AI-powered web application that generates mood-based dramatic advice using generative AI APIs.",
+         tech: "Java 17, Spring Boot, REST APIs, Maven, Docker, Render, Vercel, React, TypeScript, GitHub, AI API Integration",
+         github: "https://github.com/anshika0604/dramatic-advice",
+         image: "./project5.png"
+          },
     {
       title: "Social Media Trends Tracker",
       category: "Backend",
