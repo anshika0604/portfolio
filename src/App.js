@@ -12,6 +12,7 @@ import WhatICreate from "./components/WhatICreate";
 import DownloadCV from "./components/DownloadCV";
 import Achievements from "./components/Achievements";
 import MeteorShower from "./components/MeteorShower";
+import { Analytics } from "@vercel/analytics/react";
 
 import './App.css';
 
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <div className="bg-noise relative min-h-screen">
+      <Analytics />
 
       {/* Gradient Blobs */}
       <div className="bg-blob blob-blue"></div>
